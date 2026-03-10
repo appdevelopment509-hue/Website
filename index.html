@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena App Development Club</title>
+    <meta name="description" content="A community of passionate developers dedicated to building innovative mobile and web applications.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav section-transition">
+        <div class="nav-container">
+            <div class="logo">ARENA</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#join" class="btn-sm glow-btn btn-primary">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="Arena App Development Club">Arena App Development Club</h1>
+            <p class="subtitle">Building the Future Through Apps</p>
+            <div class="hero-buttons">
+                <a href="#join" class="btn glow-btn btn-primary">Join the Club</a>
+                <a href="events.html" class="btn glass-btn">Explore Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About the Club -->
+    <section id="about" class="section">
+        <div class="container relative z-10">
+            <h2 class="section-title">About the Club</h2>
+            <div class="about-grid">
+                <div class="about-text glass-card reveal">
+                    <p>Arena App Development Club is a community of passionate developers dedicated to building innovative mobile and web applications. We provide a platform for students to learn modern technologies, collaborate on projects, and participate in hackathons, workshops, and coding competitions.</p>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-icon-box glass-card glow-hover reveal" style="transition-delay: 100ms;">
+                        <i class="ph ph-android-logo"></i>
+                        <span>Android</span>
+                    </div>
+                    <div class="tech-icon-box glass-card glow-hover reveal" style="transition-delay: 200ms;">
+                        <i class="ph ph-device-mobile"></i>
+                        <span>Flutter</span>
+                    </div>
+                    <div class="tech-icon-box glass-card glow-hover reveal" style="transition-delay: 300ms;">
+                        <i class="ph ph-browser"></i>
+                        <span>Web Dev</span>
+                    </div>
+                    <div class="tech-icon-box glass-card glow-hover reveal" style="transition-delay: 400ms;">
+                        <i class="ph ph-brain"></i>
+                        <span>AI / ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Events Section -->
+    <section id="events" class="section">
+        <div class="container relative z-10">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card glass-card glow-hover reveal" style="transition-delay: 100ms;">
+                    <div class="event-date">Oct 15, 2026</div>
+                    <h3>App Development Hackathon</h3>
+                    <p>A 48-hour challenge to build the most innovative mobile application.</p>
+                    <a href="#" class="btn-text">Register Now <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="event-card glass-card glow-hover reveal" style="transition-delay: 200ms;">
+                    <div class="event-date">Oct 22, 2026</div>
+                    <h3>Coding Challenge</h3>
+                    <p>Test your algorithmic skills in our competitive programming arena.</p>
+                    <a href="#" class="btn-text">Register Now <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="event-card glass-card glow-hover reveal" style="transition-delay: 300ms;">
+                    <div class="event-date">Nov 05, 2026</div>
+                    <h3>UI/UX Design Workshop</h3>
+                    <p>Learn the principles of modern app design and prototyping in Figma.</p>
+                    <a href="#" class="btn-text">Register Now <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="event-card glass-card glow-hover reveal" style="transition-delay: 400ms;">
+                    <div class="event-date">Nov 12, 2026</div>
+                    <h3>Tech Talk Sessions</h3>
+                    <p>Industry experts share insights on the future of mobile technologies.</p>
+                    <a href="#" class="btn-text">Register Now <i class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Team Section -->
+    <section id="team" class="section">
+        <div class="container relative z-10">
+            <h2 class="section-title">Core Team</h2>
+            <div class="team-grid">
+                <div class="team-card reveal" style="transition-delay: 100ms;">
+                    <div class="avatar-wrap neon-glow">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="President">
+                    </div>
+                    <h3>Alex Mercer</h3>
+                    <p>President & Lead Dev</p>
+                </div>
+                <div class="team-card reveal" style="transition-delay: 200ms;">
+                    <div class="avatar-wrap neon-glow">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="UX Lead">
+                    </div>
+                    <h3>Sarah Connor</h3>
+                    <p>UI/UX Lead</p>
+                </div>
+                <div class="team-card reveal" style="transition-delay: 300ms;">
+                    <div class="avatar-wrap neon-glow">
+                        <img src="https://i.pravatar.cc/150?img=33" alt="Coordinator">
+                    </div>
+                    <h3>David Chen</h3>
+                    <p>Events Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Join the Club -->
+    <section id="join" class="section">
+        <div class="container relative z-10">
+            <div class="join-container glass-card neon-border reveal">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Join the Club</h2>
+                <p class="text-center mb-2" style="color: var(--text-muted);">Ready to start building? Register now to become an Arena member.</p>
+                <form class="join-form" onsubmit="event.preventDefault(); submitForm(this);">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="University Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="department" required>
+                            <option value="" disabled selected>Select Department</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="year" required>
+                            <option value="" disabled selected>Select Year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn glow-btn btn-primary btn-block">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="footer glass-nav">
+        <div class="container reveal">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>ARENA</h3>
+                    <p>Building the Future Through Apps</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/arena_app_development_club" class="social-icon" aria-label="Instagram" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/arena-app-development-club" class="social-icon" aria-label="LinkedIn" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/appdevelopment509-hue" class="social-icon" aria-label="GitHub" target="_blank"><i class="ph ph-github-logo"></i></a>
+                    <a href="mailto:appdevelopment509@gmail.com" class="social-icon" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Arena App Development Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Three.js Library via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

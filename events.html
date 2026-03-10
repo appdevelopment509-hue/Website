@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Arena App Development Club</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/events.css">
+</head>
+<body class="events-body">
+    <!-- Reusing the 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav section-transition">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration:none;">ARENA</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#join" class="btn-sm glow-btn btn-primary">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Global Back to Split View Button (Hidden initially) -->
+    <button id="back-btn" class="glass-btn back-btn">
+        <i class="ph ph-arrow-left"></i> Back to All Events
+    </button>
+
+    <main class="events-split-container">
+        
+        <!-- Left Panel: Past Events -->
+        <section id="panel-past" class="split-panel past-panel" data-panel="past">
+            <div class="panel-overlay"></div>
+            
+            <!-- Default Split View Content -->
+            <div class="panel-title-container">
+                <h2 class="panel-title">Past Events</h2>
+                <p class="panel-subtitle">Explore our history of innovation</p>
+                <div class="panel-cta">Click to View <i class="ph ph-arrow-right"></i></div>
+            </div>
+
+            <!-- Expanded Fullscreen Content -->
+            <div class="expanded-content hidden">
+                <div class="content-wrapper">
+                    <h2 class="glitch-text section-header" data-text="Archived Experiences">Archived Experiences</h2>
+                    <p class="text-muted section-desc">A timeline of our previous hackathons, workshops, and speaking events.</p>
+
+                    <div class="timeline-container">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item glass-card glow-hover">
+                            <div class="timeline-date">Sep 2025</div>
+                            <div class="timeline-content">
+                                <h3>Guest Tech Talk: Future of AI</h3>
+                                <p>Industry professionals visited to discuss the integration of machine learning in cross-platform mobile apps.</p>
+                                <div class="tags">
+                                    <span class="tag">AI/ML</span> <span class="tag">Networking</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item glass-card glow-hover">
+                            <div class="timeline-date">Apr 2025</div>
+                            <div class="timeline-content">
+                                <h3>App Development Hackathon V2</h3>
+                                <p>Over 150 students participated in our flagship 48-hour build challenge. The winning app was a campus navigation tool using AR.</p>
+                                <div class="tags">
+                                    <span class="tag">Hackathon</span> <span class="tag">AR</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item glass-card glow-hover">
+                            <div class="timeline-date">Feb 2025</div>
+                            <div class="timeline-content">
+                                <h3>UI/UX Masterclass</h3>
+                                <p>A deep dive into prototyping, user research, and creating high-fidelity mockups in Figma.</p>
+                                <div class="tags">
+                                    <span class="tag">Design</span> <span class="tag">Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Upcoming Events -->
+        <section id="panel-upcoming" class="split-panel upcoming-panel" data-panel="upcoming">
+            <div class="panel-overlay"></div>
+            
+            <!-- Default Split View Content -->
+            <div class="panel-title-container">
+                <h2 class="panel-title">Upcoming Events</h2>
+                <p class="panel-subtitle">See what we are building next</p>
+                <div class="panel-cta">Click to View <i class="ph ph-arrow-right"></i></div>
+            </div>
+
+            <!-- Expanded Fullscreen Content -->
+            <div class="expanded-content hidden">
+                <div class="content-wrapper">
+                    <h2 class="section-header" style="color:var(--primary-neon);">Future Challenges</h2>
+                    <p class="text-muted section-desc">Register for our upcoming bootcamps, sprints, and competitions.</p>
+
+                    <div class="events-grid upcoming-grid">
+                        <!-- Upcoming Card 1 -->
+                        <div class="event-card glass-card top-event neon-border">
+                            <div class="status-badge live">Spots Filling Fast</div>
+                            <div class="event-date">Oct 15, 2026</div>
+                            <h3 style="font-size:1.8rem;">App Innovation Hackathon</h3>
+                            <p>A 48-hour challenge to build the most innovative mobile application. Cash prizes for the top 3 teams!</p>
+                            <button class="btn glow-btn btn-primary btn-block">Register Now</button>
+                        </div>
+
+                        <!-- Upcoming Card 2 -->
+                        <div class="event-card glass-card glow-hover">
+                            <div class="status-badge upcoming">Next Month</div>
+                            <div class="event-date">Nov 05, 2026</div>
+                            <h3>Flutter Bootcamp</h3>
+                            <p>Learn how to build cross-platform apps from a single codebase in this intensive 3-day workshop.</p>
+                            <button class="btn glass-btn btn-block">Learn More</button>
+                        </div>
+
+                        <!-- Upcoming Card 3 -->
+                        <div class="event-card glass-card glow-hover">
+                            <div class="status-badge upcoming">Planning</div>
+                            <div class="event-date">Dec 12, 2026</div>
+                            <h3>Winter Design Sprint</h3>
+                            <p>Collaborate with designers and developers to sketch, prototype, and test an idea in one week.</p>
+                            <button class="btn glass-btn btn-block">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="js/main.js"></script> <!-- Reuses starfield logic -->
+    <script src="js/events.js"></script> <!-- Events specific logic -->
+</body>
+</html>
